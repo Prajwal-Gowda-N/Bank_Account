@@ -1,0 +1,33 @@
+1.Sum of 2 Numbers pipeline
+pipeline {
+    agent any
+    stages {
+        stage('Add Two Numbers') {
+            steps {
+                script {
+                    // Define two numbers
+                    int num1 = 10
+                    int num2 = 20    
+                    // Calculate sum
+                    int sum = num1 + num2
+                    // Print result
+                    echo "The sum of ${num1} and ${num2} is ${sum}"
+                }
+            }
+        }
+    }
+}
+
+2.HELLO WORLD PIPELINE
+
+pipeline {
+    agent any
+
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+    }
+}
