@@ -1,0 +1,104 @@
+1️⃣ Area of Square
+
+       REM Create Java file on the fly
+1.echo import java.util.Scanner; > AreaSquare.java
+2.echo class AreaSquare { >> AreaSquare.java
+3.echo     public static void main(String[] args) { >> AreaSquare.java
+4.echo         Scanner sc = new Scanner(System.in); >> AreaSquare.java
+5.echo         double side = sc.nextDouble(); >> AreaSquare.java
+6.echo         System.out.println("Area = " + (side * side)); >> AreaSquare.java
+7.echo     } >> AreaSquare.java
+8.echo } >> AreaSquare.java
+9.
+10.REM Compile & run
+11.javac AreaSquare.java
+12.echo 5 | java AreaSquare
+
+
+2️⃣ Simple Interest
+13.echo import java.util.Scanner; > SimpleInterest.java
+14.echo class SimpleInterest { >> SimpleInterest.java
+15.echo     public static void main(String[] args) { >> SimpleInterest.java
+16.echo         Scanner sc = new Scanner(System.in); >> SimpleInterest.java
+17.echo         double p = sc.nextDouble(); >> SimpleInterest.java
+18.echo         double r = sc.nextDouble(); >> SimpleInterest.java
+19.echo         double t = sc.nextDouble(); >> SimpleInterest.java
+20.echo         System.out.println("Simple Interest = " + (p*r*t/100)); >> SimpleInterest.java
+21.echo     } >> SimpleInterest.java
+22.echo } >> SimpleInterest.java
+23.
+24.javac SimpleInterest.java
+25.(
+26.echo 1000
+27.echo 5
+28.echo 2
+29.) | java SimpleInterest
+
+
+3️⃣ Prime Number Check
+echo import java.util.Scanner; > PrimeNumberCheck.java
+echo class PrimeNumberCheck { >> PrimeNumberCheck.java
+echo     public static void main(String[] args) { >> PrimeNumberCheck.java
+echo         Scanner sc = new Scanner(System.in); >> PrimeNumberCheck.java
+echo         int n = sc.nextInt(); >> PrimeNumberCheck.java
+echo         boolean isPrime = n>1; >> PrimeNumberCheck.java
+echo         for(int i=2;i*i<=n;i++) >> PrimeNumberCheck.java
+echo             if(n%i==0) isPrime=false; >> PrimeNumberCheck.java
+echo         System.out.println(isPrime ? "Prime" : "Not Prime"); >> PrimeNumberCheck.java
+echo     } >> PrimeNumberCheck.java
+echo } >> PrimeNumberCheck.java
+
+javac PrimeNumberCheck.java
+echo 17 | java PrimeNumberCheck
+
+
+4️⃣ Alternate Prime Numbers
+
+echo class AlternatePrimes { > AlternatePrimes.java
+echo     public static void main(String[] args) { >> AlternatePrimes.java
+echo         int count=0; >> AlternatePrimes.java
+echo         for(int n=2;n<=50;n++) { >> AlternatePrimes.java
+echo             boolean prime=true; >> AlternatePrimes.java
+echo             for(int i=2;i*i<=n;i++) >> AlternatePrimes.java
+echo                 if(n%i==0) prime=false; >> AlternatePrimes.java
+echo             if(prime && ++count%2==1) System.out.print(n + " "); >> AlternatePrimes.java
+echo         } >> AlternatePrimes.java
+echo     } >> AlternatePrimes.java
+echo } >> AlternatePrimes.java
+
+javac AlternatePrimes.java
+java AlternatePrimes
+
+
+5️⃣ String Length
+echo import java.util.Scanner; > StringLength.java
+echo class StringLength { >> StringLength.java
+echo     public static void main(String[] args) { >> StringLength.java
+echo         Scanner sc = new Scanner(System.in); >> StringLength.java
+echo         String s = sc.nextLine(); >> StringLength.java
+echo         System.out.println("Length = " + s.length()); >> StringLength.java
+echo     } >> StringLength.java
+echo } >> StringLength.java
+
+javac StringLength.java
+echo HelloWorld | java StringLength
+
+6️⃣ Bank Service
+echo class BankService { > BankService.java
+echo     static class BankAccount { >> BankService.java
+echo         double balance; >> BankService.java
+echo         BankAccount(double b) { balance=b; } >> BankService.java
+echo         void deposit(double a) { balance+=a; } >> BankService.java
+echo         void withdraw(double a) { balance-=a; } >> BankService.java
+echo         double getBalance() { return balance; } >> BankService.java
+echo     } >> BankService.java
+echo     public static void main(String[] args) { >> BankService.java
+echo         BankAccount acc = new BankAccount(6000); >> BankService.java
+echo         acc.deposit(900); >> BankService.java
+echo         acc.withdraw(100); >> BankService.java
+echo         System.out.println("Final Balance = " + acc.getBalance()); >> BankService.java
+echo     } >> BankService.java
+echo } >> BankService.java
+
+javac BankService.java
+java BankService
