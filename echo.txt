@@ -102,3 +102,119 @@ echo } >> BankService.java
 
 javac BankService.java
 java BankService
+
+
+
+
+
+cd Desktop
+mkdir Git_Lab_Experiment1
+cd Git_Lab_Experiment1
+git init
+ls
+ls -a
+git config --global user.name "Meghana"
+git config --global user.email "meghana@gmail.com"
+echo "This is my first Git experiment" > README.txt
+git status
+git add README.txt
+git status
+git commit -m "Initial commit"
+echo "Git tracks file changes" >> README.txt
+git status
+git add README.txt
+git commit -m "Updated README file"
+git log
+history -a
+
+
+exp 2 
+
+cd path/to/your/folder
+git init
+notepad file1.txt
+git add file1.txt
+git commit -m "Initial commit"
+git branch
+git branch feature-branch
+git checkout feature-branch
+notepad file1.txt
+git add file1.txt
+git commit -m "Added new feature in feature branch"
+git checkout master
+notepad file1.txt
+git add file1.txt
+git commit -m "Updated file in master branch"
+git merge feature-branch
+notepad file1.txt
+git add file1.txt
+git commit -m "Resolved merge conflict"
+git status
+git log
+git branch -d feature-branch
+
+exp 3 
+
+git config --global user.name "Your Name"
+git config --global user.email "your_email@example.com"
+cd Desktop
+git clone https://github.com/YourUsername/git-lab-demo.git
+cd git-lab-demo
+notepad main.py
+git add main.py
+git commit -m "Add main.py file"
+git push -u origin main
+git pull origin main
+git status
+git log
+
+exp 4 
+
+cd Desktop
+git clone https://github.com/YourUsername/git-lab-demo.git
+cd git-lab-demo
+git branch feature-update
+git checkout feature-update
+notepad main.py
+git add main.py
+git commit -m "Updated file in feature branch"
+git push origin feature-update
+git checkout main
+git pull origin main
+git status
+git log
+
+exp 5 
+
+cd ~
+mkdir DevOps_Exp5
+cd DevOps_Exp5
+git init
+git status
+echo "Git Tagging Experiment" > file1.txt
+git add file1.txt
+git commit -m "Initial commit for tagging experiment"
+git log --oneline
+git tag -a v1.0 -m "Version 1.0 release"
+git tag
+git show v1.0
+git remote add origin https://github.com/USERNAME/DevOps_Exp5.git
+git push origin master
+git push origin v1.0
+git push --tags
+
+exp  6
+
+java --version
+mvn --version
+cd %USERPROFILE%\Desktop
+mkdir project
+cd project
+mkdir maven-project
+cd maven-project
+mvn archetype:generate
+cd maven-demo
+dir
+mvn clean package
+cd target
+dir
